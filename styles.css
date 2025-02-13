@@ -1,0 +1,78 @@
+/* Estilos Gerais */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #b2ffb2; /* Verde claro */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container Principal */
+.container {
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background: rgb(179, 255, 108);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: entrar 1s forwards;
+}
+
+/* Título */
+.titulo {
+    font-family: 'Brush Script MT', cursive; /* Fonte feita à mão */
+    color: #074607; /* Verde escuro */
+    font-size: 36px;
+}
+
+/* Descrição */
+.descricao {
+    font-size: 16px;
+    font-family: "Times New Roman", Times, serif;
+    color: #0b0000;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Botões */
+.botoes {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.botao {
+    background-color: #008000; /* Verde */
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.botao:hover {
+    background-color: #004d00;
+    transform: scale(1.1);
+}
+
+/* Botão de Cadastrar-se com Estilo Diferente */
+.cadastrar {
+    background-color: #ffcc00; /* Amarelo Ouro */
+    color: #333;
+}
+
+.cadastrar:hover {
+    background-color: #e6b800;
+}
+
+/* Animação de entrada */
+@keyframes entrar {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
