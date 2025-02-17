@@ -1,3 +1,4 @@
+let nomeDigitado = document.getElementById("nome").value;
 fetch('https://backend-eng9.onrender.com/register', { 
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
@@ -10,3 +11,6 @@ fetch('https://backend-eng9.onrender.com/register', {
 .then(response => response.json())
 .then(data => console.log(data))
 .catch(error => console.error('Erro:', error));
+function voltar() {
+    window.location.href = "index.html"; // Ajusta o caminho conforme necessário
+}
