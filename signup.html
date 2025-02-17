@@ -26,18 +26,3 @@
     <script src="signup.js"></script>
 </body>
 </html>
-
-// Função para voltar à página inicial
-function voltar() {
-    window.location.href = "index.html"; // Ajusta o caminho conforme necessário
-}
-
-// Alternar visibilidade da senha
-document.getElementById("togglePassword").addEventListener("click", function () {
-    let senhaInput = document.getElementById("senha");
-    if (senhaInput.type === "password") {
-        senhaInput.type = "text";
-    } else {
-        senhaInput.type = "password";
-    }
-});
