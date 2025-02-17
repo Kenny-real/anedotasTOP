@@ -20,3 +20,9 @@ document.getElementById("signup-form").addEventListener("submit", async function
     }
 });
 
+// Função para voltar à página anterior
+document.getElementById("voltar-btn").addEventListener("click", function () {
+    window.history.back();
+});
+
+
