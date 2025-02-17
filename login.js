@@ -1,6 +1,8 @@
+// Importações do Firebase
 import { auth } from "./firebase-config.js";
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js";
 
+// Event listener para o formulário de login
 document.getElementById("login-form").addEventListener("submit", async function (event) {
     event.preventDefault();
 
@@ -19,7 +21,8 @@ document.getElementById("login-form").addEventListener("submit", async function 
         alert("Erro ao fazer login: " + error.message);
     }
 });
+
 // Função para voltar à página anterior
 document.getElementById("voltar-btn").addEventListener("click", function () {
     window.history.back();
-});  
+});

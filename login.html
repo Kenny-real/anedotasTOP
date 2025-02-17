@@ -3,32 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login | JokesTOP</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Login</title>
+    <script type="module" src="login.js" defer></script>
 </head>
 <body>
-    <div class="container">
-        <h2>Entrar</h2>
-        <form id="login-form">
-            <input type="email" id="email" placeholder="Digite seu e-mail" required>
-            <div class="password-container">
-                <input type="password" id="senha" placeholder="Digite sua senha" required>
-                <span id="togglePassword">👁️</span>
-            </div>
-            <button type="submit">Entrar</button>
-        </form>
-        <button id="voltar-btn">Voltar</button>
-        <p><a href="signup.html">Ainda não tenho uma conta</a></p>
-    </div>
+    <h2>Login</h2>
+    <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="senha">Senha:</label>
+        <input type="password" id="senha" required>
+        <br>
+        <button type="submit">Entrar</button>
+    </form>
 
-    <!-- Firebase SDK -->
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/10.8.0/firebase-auth.js"></script>
-
-    <!-- Configuração do Firebase -->
-    <script src="firebase-config.js"></script>
-
-    <!-- Script do Login -->
-    <script src="login.js"></script>
+    <button id="voltar-btn">Voltar</button>
 </body>
 </html>
