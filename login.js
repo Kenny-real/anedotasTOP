@@ -19,3 +19,7 @@ document.getElementById("login-form").addEventListener("submit", async function 
         alert("Erro ao fazer login: " + error.message);
     }
 });
+// Função para voltar à página anterior
+document.getElementById("voltar-btn").addEventListener("click", function () {
+    window.history.back();
+});  
