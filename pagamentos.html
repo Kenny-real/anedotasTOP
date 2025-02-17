@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas de Pagamento</title>
+    
+    <!-- Link para o arquivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="titulo">Formas de Pagamento</h1>
+        
+        <div class="payment-options">
+            <!-- PayPal -->
+            <div class="payment-option">
+                <h2>Via PayPal</h2>
+                <p>Use o PayPal para realizar o pagamento rapidamente!</p>
+                <div id="paypal-button-container-P-1XW95124BR6682803M6Z4PQY"></div>
+                <script src="https://www.paypal.com/sdk/js?client-id=AXejBPwbGbrt0q4oAAa6Bf5zBQ7_KIR3ncwYRCgrCb7P2LOj9GT4JIOczCfGkNUSRbsXDCn9DysqxS0U&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+                <script>
+                  paypal.Buttons({
+                      style: {
+                          shape: 'rect',
+                          color: 'gold',
+                          layout: 'vertical',
+                          label: 'subscribe'
+                      },
+                      createSubscription: function(data, actions) {
+                        return actions.subscription.create({
+                          plan_id: 'P-1XW95124BR6682803M6Z4PQY'
+                        });
+                      },
+                      onApprove: function(data, actions) {
+                        alert(data.subscriptionID); // Exibe ID da subscrição
+                      }
+                  }).render('#paypal-button-container-P-1XW95124BR6682803M6Z4PQY'); // Renderiza o botão do PayPal
+                </script>
+            </div>
+            
+            <!-- Unitel Money -->
+            <div class="payment-option">
+                <h2>Via Unitel Money</h2>
+                <p>Para pagamentos via Unitel Money, envie o comprovativo para o nosso WhatsApp:</p>
+                <a href="https://chat.whatsapp.com/EDq0iyhPkKsAJifKe051m8" class="btn-whatsapp" target="_blank">Enviar comprovativo no WhatsApp</a>
+            </div>
+        </div>
+        
+    </div>
+</body>
+</html>
